@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐淘管理系统</title>
+    <!-- 引入bootstrop -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- 引入nProness -->
+    <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+    <!-- 引入表单验证插件的css -->
+    <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
+    <!-- 引入index页面的css -->
+    <link rel="stylesheet" href="./css/admin.css">
+
+    <!-- 引入当前页面的css -->
+    <link rel="stylesheet" href="./css/catetwo.css">
+    <!-- <style>
+        .section .add .bg {
+            background-color: #fff;
+            color: #000;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+        }
+    </style> -->
+</head>
+
+<body>
+
+    <!-- 侧边栏 -->
+    <div class="aside">
+        <!-- 商标 -->
+        <div class="brand">
+            <a href="javascript:;">ITCAST</a>
+        </div>
+        <!-- 用户 -->
+        <div class="user">
+            <img src="./image/default.png" alt="">
+            <span>超级管理员</span>
+        </div>
+        <!-- 菜单 -->
+        <ul class="menu">
+            <li class="a">
+
+                <a href="userManage.html">
+                    <i class="glyphicon glyphicon-user"></i> 用户管理</a>
+            </li>
+            <li class="a">
+
+                <a href="javascript:;">
+                    <i class="glyphicon glyphicon-list"></i> 分类管理</a>
+                <div class="child">
+                    <a href="categoryFirst.html">一级分类</a>
+                    <a href="categorySecond.html">二级分类</a>
+                </div>
+            </li>
+            <li class="a">
+
+                <a href="javascript:;">
+                    <i class="glyphicon glyphicon-tags"></i> 商品管理</a>
+            </li>
+        </ul>
+
+    </div>
+    <!-- 右边 -->
+    <div class="section">
+        <div class="nav">
+            <a data-menu href="#">
+                <span class="glyphicon glyphicon-align-justify"></span>
+            </a>
+            <a data-logout href="#myModal" data-toggle="modal">
+                <span class="glyphicon glyphicon-log-out"></span>
+            </a>
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p class="alert alert-danger">
+                                <i class="glyphicon glyphicon-info-sign"></i>您确定要退出后台管理系统吗？
+                            </p>
+
+                        </div>
+                        <div class="modal-footer fl">
+                            <button type="button" class="btn a btn-default" data-dismiss="modal">取消</button>
+                            <a type="button" class="btn b btn-primary" href="http://localhost:3000/">确定</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <!--路径导航-->
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#">管理系统</a>
+                </li>
+                <li class="active">分类管理</li>
+                <li class="active">二级分类</li>
+            </ol>
+            <!-- 添加 -->
+            <div class="add">
+                <button type="button" class="btn bg btn-primary" data-toggle="modal" data-target="#addModal" data-whatever="@getbootstrap">添加分类</button>
+
+                <!-- 弹框 -->
+                <div class="modal fade" id="addModal" tabindex="-1">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <span>&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="addModalLabel">添加分类</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <div class="dropdown">
+                                            <span>一级分类：</span>
+                                            <button class="btn btn-default" type="button" data-toggle="dropdown">
+                                                <span class="dropdown-text">请选择</span>
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a href="#">游泳馆</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <input type="hidden" name="categoryId">
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="brandName" type="text" class="form-control" placeholder="请输入二级分类名称">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="hidden" name="brandLogo">
+                                        <div class="fileupload">
+                                            <!-- <input type="file" name="pic1" data-url="/category/addSecondCategoryPic" class="btn btn-default"> -->
+                                            <a href="javascript:;" class="btn btn-default">上传图片</a>
+                                        </div>
+                                    </div>
+                                    <img width="100px" src="image/none.png" alt="">
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-primary">确定</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th width="10%">序号</th>
+                            <th width="30%">一级分类名称</th>
+                            <th width="30%">二级分类名称</th>
+                            <th width="20%">二级分类LOGO</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <!-- 引入jQuery -->
+    <!-- <script src="./lib/jquery/jquery.min.js"></script> -->
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <!-- 引入bootstrap插件 -->
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 引入echarts库 -->
+    <script src="./lib/echarts/echarts.min.js"></script>
+    <!-- 引入表单验证的插件 -->
+    <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+    <!-- 引入进度条插件 -->
+    <script src="./lib/nprogress/nprogress.js"></script>
+    <!-- 引入admin文件  -->
+    <script src="./js/admin.js"></script>
+    <!-- 引入index.js插件 -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

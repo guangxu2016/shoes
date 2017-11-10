@@ -1,0 +1,144 @@
+html,body,ul,li {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+a:hover,
+a:active {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+/* 侧边栏 */
+
+.aside {
+    position: absolute;
+    height: 100%;
+    width: 180px;
+    background-color:  #222d32;
+   
+}
+/* 商标 */
+.aside .brand {
+    height: 50px;
+    width: 180px;
+    line-height: 50px;
+    text-align: center;
+    background-color:  #367fa9;
+}
+.aside .brand a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* 用户 */
+.aside .user {
+    margin-top: 30px;
+    padding-left:20px;
+}
+
+.aside .user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.aside .user span {
+    color: #fff;
+    font-size:12px;
+}
+/* 菜单 */
+.aside .menu {
+    padding-top: 40px;
+    padding-left :30px;
+
+}
+
+
+.aside .menu  a {
+    color: #aaa;
+    font-size: 14px;
+}
+.aside .menu li {
+   line-height: 40px;
+    
+}
+.aside .menu i {
+    color: #aaa;
+}
+    /* 分类 */
+.aside .menu .child a {
+    display: block;
+}
+.aside .menu .child {
+    display: none;
+}
+
+
+/* 右边 */
+.section {
+    padding-left: 180px;
+    height: 100%;
+    background-color: #666;
+}
+
+/* 导航 */
+.section .nav {
+    height: 50px;
+    line-height: 50px;
+    background-color: #367fa9;
+    padding: 20px 20px;
+}
+.section.menu {
+    padding-left: 0;
+}
+
+.section .nav a {
+    display: block;
+    color: #fff;
+    line-height: 50px;
+}
+ .section .container-fluid {
+    width: 100%;
+   
+} 
+/*    v 饼图       */
+
+.section .ad_content .picTable {
+    width: 45%;
+    height: 400px;
+    float: left;
+}
+
+.section .ad_content .picTable:last-child {
+    margin-left: 10px;
+}
+.section .nav a:first-child span {
+    float: left;
+}
+.section .nav a:nth-child(2) span {
+    float: right;
+}
+.section .nav .fl .a {
+    float: left;
+}
+
+.section .nav .fl .b {
+    float: right;
+    height: 30px;
+    line-height: 20px;
+}
+
+/* 路径导航 */
+.section .container-fluid {
+    background-color: #fff;
+}
+
+.section .breadcrumb {
+    margin-top: 20px;
+   
+}
+
+

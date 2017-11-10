@@ -1,0 +1,30 @@
+.section .add .s {
+    margin-bottom: 15px;
+}
+a:link,
+a:visit,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+.section .add a {
+    padding:4px 12px;
+    border-radius: 5px;
+    color: #000;
+    border:1px solid #ccc;
+}
+
+.section .add .bg {
+    background-color: #fff;
+    color: #000;
+    padding: 6px 12px;
+    border:1px solid #ccc;
+}
+
+.section .add .table {
+    margin-top: 15px;
+}
+
+.section .add .table th {
+    text-align: center;
+}
