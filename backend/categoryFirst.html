@@ -150,7 +150,18 @@
                             <th width="80%">分类名称</th>
                         </tr>
                     </thead>
+                    <tbody>
+                        <tr class="text-center">
+                            <td>1</td>
+                            <td>adgf</td>
+                        </tr>
+                    </tbody>
                 </table>
+                <div class="page">
+                    <ul class="pagination">
+
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -158,25 +169,34 @@
     </div>
 
 
-
+    <!-- 模板引擎 -->
+    <script type="text/template" id="first-template">
+        <%for(var i = 0;i<rows.length;i++){%>
+                <tr class="text-center">
+                  <td><%=(page-1)*size+i+1%></td>
+                  <td><%=rows[i].categoryName%></td>
+                </tr>
+                <%}%>
+    </script>
 
 
 
     <!-- 引入jQuery -->
-    <!-- <script src="./lib/jquery/jquery.min.js"></script> -->
     <script src="./lib/jquery/jquery.min.js"></script>
     <!-- 引入bootstrap插件 -->
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-    <!-- 引入echarts库 -->
-    <script src="./lib/echarts/echarts.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-native.js"></script>
     <!-- 引入表单验证的插件 -->
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+    <!-- 引入分页插件 -->
+    <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
     <!-- 引入进度条插件 -->
     <script src="./lib/nprogress/nprogress.js"></script>
     <!-- 引入admin文件  -->
     <script src="./js/admin.js"></script>
     <!-- 引入index.js插件 -->
-    <script src="./js/index.js"></script>
+    <script src="./js/categoryFirst.js"></script>
 </body>
 
 </html>
